@@ -1,0 +1,87 @@
+2020-07-24 17:56:45,489 ERROR: Exception on /index [GET] [in /home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/faruk/data/works/web_app/microblog/app/routes.py", line 35, in index
+    posts = current_user.followed_posts().all()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2020-07-24 17:56:53,646 ERROR: Exception on /index [GET] [in /home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/faruk/data/works/web_app/microblog/app/routes.py", line 35, in index
+    posts = current_user.followed_posts().all()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2020-07-24 17:57:19,857 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 17:57:22,618 ERROR: Exception on /index [GET] [in /home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/faruk/data/works/web_app/microblog/app/routes.py", line 35, in index
+    posts = current_user.followed_posts().all()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2020-07-24 17:57:24,410 ERROR: Exception on /index [GET] [in /home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/faruk/data/works/web_app/microblog/app/routes.py", line 35, in index
+    posts = current_user.followed_posts().all()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2020-07-24 17:58:48,701 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 18:22:27,787 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
