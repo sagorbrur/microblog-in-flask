@@ -1,0 +1,122 @@
+2020-07-24 00:34:44,834 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 00:35:14,360 ERROR: Exception on /edit_profile [POST] [in /home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    self.dialect.do_execute(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/faruk/data/works/web_app/microblog/app/routes.py", line 113, in edit_profile
+    db.session.commit()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
+    self.transaction.commit()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2523, in flush
+    self._flush(objects)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2664, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2624, in _flush
+    flush_context.execute()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 230, in save_obj
+    _emit_update_statements(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 994, in _emit_update_statements
+    c = cached_connections[connection].execute(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1014, in execute
+    return meth(self, multiparams, params)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1127, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    self.dialect.do_execute(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
+[parameters: ('john', 'Hi this is faruk and a software engineer in Tokyo, Japan.', 2)]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+2020-07-24 00:37:34,960 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 00:41:35,966 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 01:31:56,126 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 01:32:03,230 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 01:56:11,233 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 02:02:26,677 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 02:13:01,901 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 02:15:35,980 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 17:45:08,417 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 17:50:41,534 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 17:50:44,555 ERROR: Exception on /index [GET] [in /home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/faruk/data/works/web_app/microblog/app/routes.py", line 41, in index
+    return render_template('index.html', title='Home Page', posts=posts)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/faruk/data/works/web_app/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/faruk/data/works/web_app/microblog/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/faruk/data/works/web_app/microblog/app/templates/index.html", line 7, in block "content"
+    {{ form.hidden_tag() }}
+  File "/home/faruk/miniconda3/envs/web_app/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2020-07-24 17:56:42,602 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
