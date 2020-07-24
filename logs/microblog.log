@@ -108,3 +108,5 @@ Traceback (most recent call last):
     prev_url = url_for('index', page=posts.prev_num) if posts.hase_prev else None
 AttributeError: 'Pagination' object has no attribute 'hase_prev'
 2020-07-24 19:02:47,036 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 19:04:13,365 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
+2020-07-24 19:11:01,454 INFO: Microblog Startup [in /home/faruk/data/works/web_app/microblog/app/__init__.py:34]
